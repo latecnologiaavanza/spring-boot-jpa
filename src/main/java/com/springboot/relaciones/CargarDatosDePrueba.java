@@ -19,17 +19,17 @@ public class CargarDatosDePrueba implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Crear una dirección
+        Estudiante estudiante = new Estudiante();
+        estudiante.setNombre("Juan");
+
         Direccion direccion = new Direccion();
         direccion.setCalle("123 Calle Principal");
         direccion.setCiudad("Ciudad Ejemplo");
         direccion.setCodigoPostal("12345");
-        direccionRepository.save(direccion);
 
-        // Crear un estudiante asociado a la dirección
-        Estudiante estudiante = new Estudiante();
-        estudiante.setNombre("Juan");
         estudiante.setDireccion(direccion);
+
+        // Guardar el estudiante (y automáticamente se guardará la dirección)
         estudianteRepository.save(estudiante);
     }
 }

@@ -16,7 +16,7 @@ public class Estudiante {
     private Long id;
     private String nombre;
 
-    @OneToOne(cascade = CascadeType.MERGE)
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "direccion_id", referencedColumnName = "id")
     private Direccion direccion;
 
