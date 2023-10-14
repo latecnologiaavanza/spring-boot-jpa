@@ -1,4 +1,4 @@
-package com.springboot.relaciones.entity;
+package com.springboot.relaciones.entities.entity1;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
